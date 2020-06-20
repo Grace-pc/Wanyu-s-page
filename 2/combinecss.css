@@ -1,0 +1,360 @@
+/*下面是stylemenu.css*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff;  
+    overflow-x: hidden;
+      
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    top:0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.062);
+
+}
+
+ul{
+    margin-left: 60px;/*the position of the navigation:the link of the navigation move from the left to the right for 60px far.*/
+}
+
+ul li {
+    list-style: none;/*make the front dot dissappear*/
+    display: inline-block;/*The menu bar would link next to each other. Menu bar 里面的选项会横向排布 不是是纵向排列*/
+    float: left;/*There will be no gap between each option in the meny bar*/
+    line-height: 100px;/*because the navigation height is 100px. After we setting this, the text in the menu bar will be in the middle of the row no matter how big the text are.*/
+
+}
+
+ul li a {
+    display: block;/*before we set this: the cursor would change only when our cursor stops at the top pf the words. After: The rage for the cursor to change would be expanded as we only need to be closed to the link, we could just clink on it. */
+    text-decoration: none;/*make the underline of the text dissappear. This could be put in *{} at the beginning and in that case, all of the text in this page would have no underline.*/
+    font-size: 14px;
+    font-family: Arial;
+    color: rgb(63, 34, 34);
+    padding: 0 20px;/*0 padding from the top to the bottom because we don't need it. We've already set it in our navigation bar.the 20px is for the each left and right links in the navigation bar. */
+}
+
+ul li a:hover {
+   color: rgb(226, 226, 226);
+}
+
+
+
+#contact{
+  padding-bottom: 15%;
+  height: fit-content;
+}
+
+
+
+/*以下是scroll down的设定*/
+
+
+
+
+
+
+
+
+
+
+/*下面是2.css*/
+
+
+
+
+.img-banner{
+    display: none;/*right now we won't see the banner in the website*/
+}
+
+.img-info{
+    width: 100%;
+}
+
+.img-info h2{
+    padding: 30px 30px 20px;/*top; left&right; bottom*/
+    font-family: arial;
+    font-size: 50px;
+    color: #111;
+    line-height: 44px;
+}
+
+.img-info h3{
+    padding: 30px 30px 20px;/*top; left&right; bottom*/
+    font-family: arial;
+    font-size: 20px;
+    color: #111;
+    line-height: 44px;
+}
+
+.img-info p{
+    padding: 0px 30px 20px;/*top; left&right; bottom*/
+    font-family: arial;
+    font-size: 16px;
+    color: #111;
+    line-height: 24px;
+}
+
+
+.img-me{
+    width: 100%;
+}
+
+/*the @media statement tells the CSS and html that it only runs the code {in the curly bracket} if the statement afterward(in the bracket) is true. In this code right now it means that if we have a screen, and the screen has a min-width of 768px, it would just run the code in the curly brackets.*/
+@media only screen and (min-width:768px) {
+    .img-banner{
+        display: block; /*It's now gonna run the img */
+        width: 100%;
+        padding-bottom: 30px;
+        padding-left: 60px;
+    }
+
+    .logo{
+        display: none;
+    }
+
+
+    .nav-links {
+        display: flex; /*横向排列*/
+        padding-right: 0px;
+        justify-content: space-around; /*这个包括下面一行一起 都是各个选项link之间的距离*/
+        width: 20%;
+      }
+
+    .wrapper{
+        width: 600px;
+        margin: 0 auto;
+        padding-bottom: 15%;
+    }
+
+    .img-info h2{
+        padding: 30px 0px 0px;/*top; left&right; bottom*/
+       
+    }
+    
+    .img-info h3{
+        padding: 30px 0px 0px;/*top; left&right; bottom*/
+       
+    }
+
+    .img-info p{
+        padding: 20px 0px 0px;/*top; left&right; bottom*/
+      
+    }
+
+    
+    .img-me{
+    padding-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1000px) {
+
+    body {
+      
+        overflow-x: hidden;
+      }
+    .wrapper{
+        width: 1000px;
+    }
+    .img-info{
+        width: 50%;
+        float: right;
+        /*"float" makes the elements align horizontally next to each other.*/
+    }
+    .img-info h2{
+        padding: 20px 0px 0px 30px;/*top; right; bottom; left*/ 
+    }
+
+    .img-info h3{
+        padding: 20px 0px 0px 30px;/*top; right; bottom; left*/ 
+    }
+    
+    .img-info p{
+        padding: 20px 0px 0px 30px;/*top; right; bottom; left*/
+      
+    }
+
+    .img-me{
+        padding-top: 0px;
+        width: 50%;
+        float: left;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  nav {
+    display: flex; /*links in the nav bar will go to the right side of "the nav" title*/
+    justify-content: space-around; /*while the title "the Nav" will be still on the left side, its links will be shown up pn the right side*/
+    align-items: center; /*the title "the nav " will be centered vertically*/
+    min-height: 8vh;
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif; /*copied from the font family online*/
+  }
+  
+  .logo {
+    color: rgb(206, 204, 204);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 20px;
+  }
+
+
+  
+  .nav-links {
+    display: flex; /*横向排列*/
+    justify-content: space-around; /*这个包括下面一行一起 都是各个选项link之间的距离*/
+    width: 30%;
+  }
+  
+  .nav-links li {
+    list-style: none; /*没有list前面的点了*/
+    padding-top: 3%;
+  }
+  
+  .nav-links a {
+    color: rgba(24, 8, 14, 0.329);
+    text-decoration: none; /*让link下面的横线消失*/
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+
+  }
+
+  .graph-link a{
+    color:rgba(24, 8, 14, 0.329);
+    text-decoration: none; /*让link下面的横线消失*/
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .graph-link a:hover{
+    color: rgb(226, 226, 226);
+
+  }
+  
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .burger div {/*burger那三道线的属性*/
+    width: 25px;
+    height: 3px;
+    background-color: rgba(156, 107, 107, 0.281);
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    body {
+      
+        overflow-x: hidden;
+      }
+    .nav-links {
+      width: 50%;
+    }
+  }
+
+
+  
+  @media screen and (max-width: 768px) {
+    body {
+      
+      overflow-x: hidden;
+    }
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      height: 10vh;
+      top: 4vh;
+      background-color: #ffffff00;
+      display: flex;
+      flex-direction: row;
+      align-items: right;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+      opacity: 0;
+      /* padding: -5% 0.5%; */
+    }
+    .burger {
+      display: block;
+    }
+  }
+  
+  .nav-active {
+    transform: translateX(0%);
+  }
+  
+  @keyframes navLinkFade{
+      from{
+          opacity: 0;
+          transform: translateX(50px);
+      }
+      to{
+          opacity: 1;
+          transform: translateX(0px);
+      }
+  }
+  
+  /*下面三项都是让burger点击的时候变成❌*/
+  .toggle .line1{
+      transform: rotate(-45deg) translate(-5px,6px);
+  
+  }
+  .toggle .line2{
+      opacity: 0;
+  
+  }.toggle .line3{
+      transform: rotate(45deg) translate(-5px,-6px);
+  
+  
+  }
+
+  hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.em;
+    margin-block-end: 0.1em;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 0.5px;
+}
+
+
+
+
